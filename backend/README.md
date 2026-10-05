@@ -1,3 +1,9 @@
+# FitnessMotion - Backend
+
+Frontend web application for **FitnessMotion**, an AI-powered personal fitness coach and motion-checking platform.
+
+---
+
 ## Features
 
 * **🔐 Secure Authentication & User Management**
