@@ -1,6 +1,6 @@
-# MotionCorrect
+# FitnessMotion
 
-**MotionCorrect** is a full-stack AI-powered personal fitness coach and motion-checking web application. It uses real-time computer vision in the browser to track your body joints, count reps, analyze your form range of motion, and provide intelligent coaching feedback using a locally hosted Qwen Large Language Model.
+**FitnessMotion** is a full-stack AI-powered personal fitness coach and motion-checking web application. It uses real-time computer vision in the browser to track your body joints, count reps, analyze your form range of motion, and provide intelligent coaching feedback using a locally hosted Qwen Large Language Model.
 
 ---
 
@@ -109,7 +109,7 @@ python test_model.py
 
 ## 📂 Project Structure
 ```text
-MotionCorrect/
+FitnessMotion/
 ├── backend/
 │   ├── ai/
 │   │   ├── coach.py                 # AI conversational coach logic & chat prompts
