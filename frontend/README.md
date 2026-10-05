@@ -1,6 +1,6 @@
-# MotionCorrect - Frontend
+# FitnessMotion - Frontend
 
-Frontend web application for **MotionCorrect**, an AI-powered personal fitness coach and motion-checking platform.
+Frontend web application for **FitnessMotion**, an AI-powered personal fitness coach and motion-checking platform.
 
 ---
 
