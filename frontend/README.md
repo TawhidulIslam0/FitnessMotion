@@ -1,16 +1,69 @@
-# React + Vite
+# MotionCorrect - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend web application for **MotionCorrect**, an AI-powered personal fitness coach and motion-checking platform.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+* **📷 Real-Time Computer Vision Pose Tracking**
+  * Tracks body joints live using browser-based MediaPipe BlazePose and HTML5 Canvas.
+  * Calculates joint angles on the fly to monitor form and track repetitions.
+* **💬 Interactive AI Chat Coach**
+  * Built-in chat panel (`CoachPanel`) allowing users to ask fitness questions and receive real-time guidance.
+* **📊 User Dashboard & Statistics**
+  * View summary cards for total workouts, total reps, and average form accuracy.
+  * Interactive workout history table displaying past sessions.
+* **👤 Profile & Personal Records (PRs)**
+  * Manage account info, track weight history, and view automated BMI calculations.
+  * Log and review personal lifting records across multiple exercises (Squats, Bicep Curls, Shoulder Presses).
+* **🔐 Secure Authentication**
+  * Dedicated Login and Signup views with JWT token-based session handling.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Core Framework:** React
+* **Build Tool:** Vite
+* **Language:** JavaScript
+* **Styling:** CSS3 (Inline styles & custom layouts)
+* **Computer Vision:** `@mediapipe/tasks-vision` (BlazePose)
+* **Routing:** `react-router-dom`
+
+---
+
+### Setup & Installation
+
+1. **Navigate to the frontend directory:**
+    ```bash
+    cd frontend
+    ```
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+3.  **Start the development server:**
+    ```bash
+    npm run dev -- --open
+    ```
+    The application will be accessible at http://localhost:5173.
+
+---
+
+## Project Structure
+```text
+frontend/
+├── public/
+│   └── pose_landmarker_lite.task    # MediaPipe pose model asset
+└── src/
+    ├── App.jsx                      # Main routing and application structure
+    ├── App.css                      # Application-specific styles
+    ├── CoachPanel.jsx               # Interactive AI chat interface component
+    ├── DashBoard.jsx                # User dashboard, stats, and workout history
+    ├── Login.jsx                    # User sign-in screen
+    ├── Profile.jsx                  # User profile, weight logs, and PR tracker
+    ├── SignUp.jsx                   # User registration screen
+    ├── WebcamCapture.jsx            # Computer vision pose detection & exercise screen
+    ├── index.css                    # Global application styles
+    └── main.jsx                     # Application entry point and DOM mounting
